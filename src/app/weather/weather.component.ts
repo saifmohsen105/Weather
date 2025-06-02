@@ -21,7 +21,7 @@ export class WeatherComponent {
 
 
   getWather() {
-    this.weatherService.getWaather(this.country).subscribe({
+    this.weatherService.getWeather(this.country).subscribe({
       next: (res) => {
         this.weather = Array(res);
         console.log(this.weather);
@@ -35,6 +35,7 @@ export class WeatherComponent {
   ngOnInit(): void {
     this.getWather()
   }
+
   getLocationUser(): string {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
