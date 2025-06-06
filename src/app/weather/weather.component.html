@@ -14,6 +14,59 @@
 </nav>
 
 <!-- Main Content -->
+
+
+
+@if(loading) {
+  <!-- lodaing -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-10 animate-pulse items-center h-[100vh]">
+  <!-- Skeleton Card Placeholder x3 -->
+  <div class="rounded-3xl bg-white shadow-xl  space-y-4 p-10">
+    <div class="h-8 bg-gray-300 rounded w-3/4 mx-auto"></div> <!-- City name -->
+    <div class="h-4 bg-gray-300 rounded w-1/2 mx-auto"></div> <!-- Country + date -->
+    <div class="flex justify-center">
+      <div class="h-20 w-20 bg-gray-300 rounded-full"></div> <!-- Icon circle -->
+    </div>
+    <div class="h-6 bg-gray-300 rounded w-2/3 mx-auto"></div> <!-- Weather condition -->
+    <div class="space-y-2 text-center">
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div> <!-- Temp -->
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div> <!-- Humidity -->
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div> <!-- Wind -->
+    </div>
+    <div class="h-10 bg-purple-400 rounded-full w-28 mx-auto mt-5"></div> <!-- Read More btn -->
+  </div>
+
+  <div class="rounded-3xl bg-white shadow-xl  space-y-4 p-10">
+    <div class="h-8 bg-gray-300 rounded w-3/4 mx-auto"></div>
+    <div class="h-4 bg-gray-300 rounded w-1/2 mx-auto"></div>
+    <div class="flex justify-center">
+      <div class="h-20 w-20 bg-gray-300 rounded-full"></div>
+    </div>
+    <div class="h-6 bg-gray-300 rounded w-2/3 mx-auto"></div>
+    <div class="space-y-2 text-center">
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div>
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div>
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div>
+    </div>
+    <div class="h-10 bg-purple-400 rounded-full w-28 mx-auto mt-5"></div>
+  </div>
+
+  <div class="rounded-3xl bg-white shadow-xl  space-y-4 p-10">
+    <div class="h-8 bg-gray-300 rounded w-3/4 mx-auto"></div>
+    <div class="h-4 bg-gray-300 rounded w-1/2 mx-auto"></div>
+    <div class="flex justify-center">
+      <div class="h-20 w-20 bg-gray-300 rounded-full"></div>
+    </div>
+    <div class="h-6 bg-gray-300 rounded w-2/3 mx-auto"></div>
+    <div class="space-y-2 text-center">
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div>
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div>
+      <div class="h-4 bg-gray-300 rounded w-1/3 mx-auto"></div>
+    </div>
+    <div class="h-10 bg-purple-400 rounded-full w-28 mx-auto mt-5"></div>
+  </div>
+</div>
+} @else {
 <div
   class="w-full min-h-screen bg-gradient-to-br from-gray-100 via-white to-blue-100 pt-28 pb-10 px-4 flex justify-center">
   <div class="w-full max-w-7xl">
@@ -79,3 +132,5 @@
     </div>
   </div>
 </div>
+<app-section-1-home-page [detailsWeather]="weather"></app-section-1-home-page>
+<app-section-2-home-page [detailsWeather]="weather"></app-section-2-home-page>}

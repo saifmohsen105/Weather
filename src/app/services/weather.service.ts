@@ -12,10 +12,10 @@ export class WeatherService {
 
 
 
-getWeather(country: string = 'cairo'): Observable<InformationWeather> {
-  return this.http.get<InformationWeather>(
-    `https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${country}&days=3`
-  );
-}
+  getWeather(country: string ): Observable<InformationWeather> {
+    return this.http.get<InformationWeather>(
+      `https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${country}&days=3`
+    );
+  }
 
 }
